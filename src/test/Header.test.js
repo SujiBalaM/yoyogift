@@ -8,6 +8,6 @@ describe('Header tests', () => {
     const wrapper = shallow(<Header />);
 
     // Expect the wrapper object to be defined
-    // expect(wrapper.find('.list-items')).toBeDefined();
+    expect(wrapper.find('.list-items')).toBeDefined();
   });
 });

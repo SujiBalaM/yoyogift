@@ -90,19 +90,28 @@ class Header extends Component {
                 MY PROFILE
               </Button>
             ) : null}
-            <Button
+            
+            {this.props.isLoggedIn ? <Button
               className={Styles.headerButton}
               color='inherit'
-              onClick={() => {}}
+              onClick={this.logOut}
             >
-              {this.props.isLoggedIn ? 'LOGOUT' : 'LOGIN'}
+              LOGOUT
             </Button>
-            <GoogleLogin
+            :<div><GoogleLogin
               clientId='120424036583-06mdmkqoodlafd132jeqegd1in947orn.apps.googleusercontent.com'
               buttonText='Sign in with Google'
               onSuccess={this.responseGoogle}
               onFailure={this.responseGoogle}
             />
+            <Button
+              className={Styles.headerButton}
+              color='inherit'
+              onClick={() =>{}}
+            >
+              LOGIN
+            </Button></div>
+  }
           </Toolbar>
         </AppBar>
       </div>
